@@ -1,0 +1,263 @@
+<title>Watchmen Solutions OTW</title>
+<meta name="description" content="Strategic safety consulting for houses of worship. Watchmen Solutions OTW helps churches build safety teams that protect their people and keep the doors welcoming.">
+<link rel="icon" href="logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: a night-watch navy hero band with the shield, then calm stone-white sections in one reading column; gold marks only what matters. */
+:root{
+  --bg:#F3F4F1; --surface:#FFFFFF; --ink:#16233A; --muted:#55627A; --rule:#D9DDE3;
+  --gold:#9A7414; --gold-soft:#F4ECD3; --navy:#0E1C36; --navy-ink:#EDEFF4; --navy-muted:#AEB8CC; --hero-gold:#E3B521;
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --body:"Public Sans", "Segoe UI", system-ui, sans-serif;
+  --step-0:1rem; --step-1:1.2rem; --step-2:1.55rem; --step-3:2.1rem; --step-4:clamp(2.2rem,6vw,3.4rem);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0B1220; --surface:#121B2C; --ink:#E6E8EE; --muted:#9AA5BA; --rule:#25304A;
+  --gold:#E0B43E; --gold-soft:#2A2614; --navy:#070E1C; --navy-ink:#EDEFF4; --navy-muted:#AEB8CC; --hero-gold:#E3B521; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1220; --surface:#121B2C; --ink:#E6E8EE; --muted:#9AA5BA; --rule:#25304A;
+  --gold:#E0B43E; --gold-soft:#2A2614; --navy:#070E1C; --navy-ink:#EDEFF4; --navy-muted:#AEB8CC; --hero-gold:#E3B521; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+.wrap{max-width:62rem;margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:var(--step-3);letter-spacing:.02em}
+h3{font-size:var(--step-1);letter-spacing:.03em}
+p{margin:0}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+/* hero */
+.hero{background:var(--navy);color:var(--navy-ink);padding-block:56px 64px;
+  background-image:radial-gradient(ellipse at 20% 0%, rgba(31,84,184,.35), transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:center}
+.hero h1{font-size:var(--step-4);letter-spacing:.03em}
+.hero .tag{font-family:var(--display);color:var(--hero-gold);font-size:var(--step-2);margin-top:10px;letter-spacing:.04em}
+.hero .sub{color:var(--navy-muted);margin-top:18px;max-width:34rem}
+.hero .loc{margin-top:22px;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--navy-muted)}
+.hero img{width:100%;max-width:300px;justify-self:center;filter:drop-shadow(0 18px 30px rgba(0,0,0,.45))}
+.hero .cta{display:inline-block;margin-top:26px;background:var(--hero-gold);color:#0E1C36;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:6px}
+.hero .cta:hover{filter:brightness(1.08)}
+
+section{padding-block:64px;border-bottom:1px solid var(--rule)}
+section:last-of-type{border-bottom:0}
+.head{display:grid;gap:10px;margin-bottom:32px;max-width:42rem}
+.lead{color:var(--muted);font-size:var(--step-1)}
+
+/* verse */
+.verse{background:var(--surface);border-block:1px solid var(--rule);padding-block:40px}
+.verse blockquote{margin:0 auto;max-width:44rem;text-align:center;font-family:var(--display);font-size:var(--step-2);line-height:1.4}
+.verse cite{display:block;margin-top:14px;font-family:var(--body);font-style:normal;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+
+/* culture */
+.peace{font-family:var(--display);font-size:var(--step-2);color:var(--gold);margin-block:4px 28px;text-wrap:balance}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:28px 36px}
+.pillar{display:grid;gap:6px;align-content:start;min-width:0}
+.pillar p{color:var(--muted)}
+.balance{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--surface)}
+.balance div{padding:22px 24px;min-width:0}
+.balance div+div{border-left:1px solid var(--rule)}
+.balance h3{color:var(--gold);margin-bottom:10px}
+.balance ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+.church-wide{margin-top:24px;color:var(--muted);font-style:italic}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.services{grid-template-columns:1fr}}
+.svc{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:22px;display:grid;gap:10px;align-content:start;min-width:0}
+.svc .verb{font-family:var(--display);font-size:var(--step-2);color:var(--gold)}
+.svc ul{margin:0;padding-left:1.1em;display:grid;gap:4px;color:var(--muted)}
+
+/* programs */
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:20px;align-items:stretch}
+.tier{border:1px solid var(--rule);border-radius:8px;padding:24px;display:grid;grid-template-rows:auto auto auto 1fr;gap:10px;background:var(--surface);min-width:0}
+.tier.feature{border:2px solid var(--gold)}
+.tier .price{font-size:var(--step-3);font-weight:700;font-variant-numeric:tabular-nums}
+.tier .price small{font-size:1rem;font-weight:400;color:var(--muted)}
+.tier .for{color:var(--muted)}
+.tier ul{margin:6px 0 0;padding-left:1.1em;display:grid;gap:4px;align-content:start}
+.note{margin-top:20px;color:var(--muted);font-size:.95rem}
+
+/* leader */
+.leader{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:40px;align-items:start}
+.creds{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.creds li{padding-left:18px;position:relative}
+.creds li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+
+/* scripture */
+.refs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:18px}
+.ref{border-top:2px solid var(--gold);padding-top:12px;display:grid;gap:4px}
+.ref b{font-family:var(--display);font-size:var(--step-1)}
+.ref span{color:var(--muted)}
+
+/* contact */
+.contact{background:var(--navy);color:var(--navy-ink);padding-block:56px}
+.contact h2{color:var(--navy-ink)}
+.contact .lead{color:var(--navy-muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:16px;margin-top:26px}
+.card{border:1px solid rgba(227,181,33,.45);border-radius:8px;padding:18px 20px;display:grid;gap:6px;min-width:0}
+.card .label{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--hero-gold);font-weight:700}
+.card .value{font-size:var(--step-1);font-weight:600;user-select:all;overflow-wrap:anywhere}
+.copy{justify-self:start;background:transparent;color:var(--navy-ink);border:1px solid var(--navy-muted);border-radius:5px;padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer}
+.copy:hover{border-color:var(--hero-gold);color:var(--hero-gold)}
+footer{background:var(--navy);color:var(--navy-muted);font-size:.85rem;padding-block:0 32px}
+footer .wrap{border-top:1px solid rgba(174,184,204,.25);padding-top:20px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+@media (max-width:760px){
+  .hero .wrap,.leader{grid-template-columns:1fr}
+  .hero img{max-width:200px;grid-row:1}
+  .balance{grid-template-columns:1fr}
+  .balance div+div{border-left:0;border-top:1px solid var(--rule)}
+  section{padding-block:48px}
+}
+@media (prefers-reduced-motion:no-preference){.hero .cta,.copy{transition:filter .15s,border-color .15s,color .15s}}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Watchmen Solutions OTW</h1>
+      <p class="tag">Seeing what others miss.</p>
+      <p class="sub">Strategic safety consulting for houses of worship. We help churches build safety teams that protect their people and keep the doors welcoming, so ministry can thrive without fear.</p>
+      <a class="cta" href="#contact">Schedule a conversation</a>
+      <p class="loc">Thompson's Station, Tennessee · Serving Middle Tennessee</p>
+    </div>
+    <img src="logo.webp" alt="Watchmen Solutions OTW shield: a watchman with spear and cross shield standing on a city wall">
+  </div>
+</header>
+
+<div class="verse">
+  <div class="wrap">
+    <blockquote>"But if the watchman sees the sword coming and does not blow the trumpet, and the people are not warned…"<cite>Ezekiel 33:6</cite></blockquote>
+  </div>
+</div>
+
+<main>
+<section id="approach">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Our approach</p>
+      <h2>A safety culture, not a security operation</h2>
+      <p class="lead">Church safety is not about fear, policing or being hyper-secure. It is about an environment where people feel safe, cared for and protected while seeking Jesus, worshiping and being part of a community.</p>
+    </div>
+    <p class="peace">People should notice the peace, not the security.</p>
+    <div class="pillars">
+      <div class="pillar"><h3>Ministry-centered</h3><p>Safety supports ministry and never overshadows it. We remove distractions, risks and threats so worship comes first.</p></div>
+      <div class="pillar"><h3>Hospitality and awareness</h3><p>A strong safety culture blends welcome and watchfulness at every door.</p></div>
+      <div class="pillar"><h3>Shared responsibility</h3><p>Staff and volunteers all carry a sense of care for others: ushers who know CPR, children's volunteers who follow check-in policy, members who report concerning behavior.</p></div>
+      <div class="pillar"><h3>Prepared, trained and calm</h3><p>Trained teams for medical, security and emergency response. Scenario practice without stirring fear. Plans for mental-health crises, and de-escalation with dignity.</p></div>
+      <div class="pillar"><h3>Protecting the vulnerable</h3><p>Children and students, the elderly and disabled, and those in crisis come first in every plan.</p></div>
+      <div class="pillar"><h3>Led by biblical values</h3><p>Security with humility, compassion, discernment and prayer.</p></div>
+    </div>
+    <div class="balance" role="group" aria-label="Hospitality and awareness side by side">
+      <div><h3>Hospitality</h3><ul><li>Greeting people warmly</li><li>Helping guests feel seen</li><li>Compassion first</li></ul></div>
+      <div><h3>Awareness</h3><ul><li>Watching entrances and behaviors</li><li>Trained to recognize red flags</li><li>Preparedness behind the scenes</li></ul></div>
+    </div>
+    <p class="church-wide">"Prepared people create peaceful environments." A true safety culture is church-wide, not dependent on one security team.</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">What we do</p>
+      <h2>Assess, build, train and lead</h2>
+      <p class="lead">Every engagement starts with seeing your campus and your people clearly, then builds from there at the pace your church needs.</p>
+    </div>
+    <div class="services">
+      <div class="svc"><span class="verb">Assess</span><ul><li>On-site vulnerability assessment with a written, prioritized report</li><li>Camera, door-access and technology review</li><li>Vendor coordination and install oversight</li></ul></div>
+      <div class="svc"><span class="verb">Build</span><ul><li>Safety team structure, roles and selection criteria</li><li>Standard operating procedures and emergency plans</li><li>Policy review aligned with Tennessee law</li></ul></div>
+      <div class="svc"><span class="verb">Train</span><ul><li>Firearms qualification and scenario training for armed teams</li><li>Tennessee use-of-force law briefings</li><li>Medical response, de-escalation and child safety</li><li>Staff, usher and volunteer awareness</li><li>Women's situational awareness classes</li></ul></div>
+      <div class="svc"><span class="verb">Lead</span><ul><li>On-site Sunday observation and team coaching</li><li>Coaching for pastors and safety-team leaders</li><li>Integrating the team into the life of the church</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="programs">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Annual programs</p>
+      <h2>Three ways to partner</h2>
+      <p class="lead">Each program is a 12-month partnership shaped around your church. Every service is also available on its own. Contact us to talk through what fits your church.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier"><h3>Sentry</h3><p class="for">For churches starting out or checking their gaps.</p>
+        <ul><li>On-site vulnerability assessment and written report</li><li>One team or staff training session</li><li>Two leadership check-ins</li><li>Phone and email support</li></ul></div>
+      <div class="tier feature"><h3>Watchman</h3><p class="for">For churches building or rebuilding a safety team.</p>
+        <ul><li>Assessment and report</li><li>Team structure, SOPs and emergency plan built with you</li><li>Quarterly team training</li><li>Quarterly firearms qualification</li><li>Quarterly Sunday coaching visits</li></ul></div>
+      <div class="tier"><h3>Guardian</h3><p class="for">For churches with an active armed safety team.</p>
+        <ul><li>Twelve training sessions a year, including firearms and scenario training</li><li>Monthly on-site Sunday assessment and coaching</li><li>Ongoing SOP and emergency plan refinement</li><li>Priority support</li></ul></div>
+    </div>
+    <p class="note">Instructor liability insurance carried; certificate available on request.</p>
+  </div>
+</section>
+
+<section id="leader">
+  <div class="wrap leader">
+    <div class="head" style="margin-bottom:0">
+      <p class="eyebrow">Who you'll work with</p>
+      <h2>Col. (Ret.) Hans Brinke</h2>
+      <p class="lead">Founder and director</p>
+    </div>
+    <div style="display:grid;gap:18px;min-width:0">
+      <p>Hans brings nearly three decades of law-enforcement service and leadership to the faith community. He serves as a church safety director and builds programs that leaders can trust and congregations barely notice, because the peace is what people should see.</p>
+      <ul class="creds">
+        <li>Former Director of the Alaska State Troopers</li>
+        <li>About 28 years of law-enforcement service and command</li>
+        <li>USCCA Certified Firearms Instructor</li>
+        <li>Church safety director and safety-team trainer</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="foundation">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Our foundation</p>
+      <h2>Rooted in Scripture</h2>
+    </div>
+    <div class="refs">
+      <div class="ref"><b>Shepherding</b><span>John 10:11–15</span></div>
+      <div class="ref"><b>Stewardship</b><span>1 Peter 5:2–3</span></div>
+      <div class="ref"><b>Wisdom and watchfulness</b><span>Nehemiah 4:9 · Matthew 10:16</span></div>
+      <div class="ref"><b>Peace</b><span>Romans 12:18</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--hero-gold)">Contact</p>
+    <h2>Let's talk about your church</h2>
+    <p class="lead" style="margin-top:10px">The first conversation is free. We'll listen, ask questions, and tell you honestly where to start.</p>
+    <div class="cards">
+      <div class="card"><span class="label">Phone</span><span class="value" id="v-phone">907-414-9941</span><button class="copy" type="button" data-copy="v-phone">Copy number</button></div>
+      <div class="card"><span class="label">Email</span><span class="value" id="v-email">watchmensolutionsotw@gmail.com</span><button class="copy" type="button" data-copy="v-email">Copy email</button></div>
+      <div class="card"><span class="label">Based in</span><span class="value">Thompson's Station, TN</span><span style="color:var(--navy-muted)">On-site across Middle Tennessee</span></div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <span>© 2026 H. Brinke Consulting, LLC · dba Watchmen Solutions OTW. All rights reserved.</span>
+    <span>On the Wall</span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var el=document.getElementById(btn.dataset.copy), text=el.textContent.trim(), label=btn.textContent;
+    function done(msg){btn.textContent=msg;setTimeout(function(){btn.textContent=label},1600)}
+    function select(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);done('Selected — press Ctrl+C')}
+    try{navigator.clipboard.writeText(text).then(function(){done('Copied')},select)}catch(e){select()}
+  });
+});
+</script>
